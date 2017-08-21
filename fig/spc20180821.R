@@ -39,18 +39,20 @@ tcc(n = V2,
 ## fig02
 bulkdata$V1 <- factor(bulkdata$V1, levels = bulkdata$V1[order(-bulkdata$V3)]) #descending order
 
-tcc(n = V3,
-    d = V2,
-    x = V1,
-    data = bulkdata,
-    chart = "p",
-    multiply = 1,
-    dots.only = TRUE,
-    flip = TRUE,
-    cex = 1.5,
-    pex = 2, #dot size
-    y.percent = TRUE,
-    main = "Andel reoperasjoner Bulkamid",
-    ylab = "Prosent",
-    xlab = ""
-    )
+p <- tcc(n = V3,
+         d = V2,
+         x = V1,
+         data = bulkdata,
+         chart = "p",
+         multiply = 1,
+         dots.only = TRUE,
+         flip = TRUE,
+         cex = 1.5,
+         pex = 2, #dot size
+         y.percent = TRUE,
+         main = "Andel reoperasjoner Bulkamid",
+         ylab = "Prosent",
+         xlab = ""
+         )
+
+savePlot("fig02", )
