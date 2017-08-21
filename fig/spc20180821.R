@@ -17,7 +17,7 @@ source(data)
 data$per <- round(data$V2 / data$V3 * 100, 2)
 bulkdata$per <- round(bulkdata$V2 / bulkdata$V3 * 100, 2)
 
-data$V1 <- factor(data$V1, levels = data$V1[order(data$per)])
+data$V1 <- factor(data$V1, levels = data$V1[order(-data$V3)])
 
 tcc(n = V2,
     d = V3,

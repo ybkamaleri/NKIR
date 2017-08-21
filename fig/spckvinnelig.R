@@ -8,7 +8,7 @@ setwd("~/OUS/regdata")
 data1 <- read.csv("kompcc.csv", header = TRUE, sep = ";", encoding = "latin1")
 data <- read.csv("kompcc01.csv", header = TRUE, sep = ";", encoding = "utf-8") #ny datasett
 
-data$rek <- 1:nrow(data)
+data$rek <- 1:nrow(data) #rekkefølge
 data$Syk <- factor(data$Syk, levels = data$Syk[rev(data$rek)])
 
 syk = c("AHUS", "Arendal", "Bodø", "Bærum", "Drammen",
