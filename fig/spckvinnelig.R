@@ -20,7 +20,7 @@ syk = c("AHUS", "Arendal", "Bodø", "Bærum", "Drammen",
         "Østfold", "Ålesund")
 # uten å behøve å skrive alle
 labs <- paste(names(table(data$Syk))) #bare navn
-labs2 <- paste(names(table(data$Sykehus)), "sykehus") #navn med sykehsus 
+labs2 <- paste(names(table(data1$Sykehus)), "sykehus", sep = " ") #navn med sykehsus
 
 
 library(qicharts)
