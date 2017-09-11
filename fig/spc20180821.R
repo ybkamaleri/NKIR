@@ -56,3 +56,28 @@ p <- tcc(n = V3,
          )
 
 savePlot("fig02", )
+
+############
+## Function
+
+ucl <- function(data, tot, def, prot) {
+  library(data.table)
+  setDT(data)
+  tot = data[, sum(get(tot))]
+  def = data[, sum(get(def))]
+  prot = tot / def
+
+}
+
+setDT(data)
+tot <- data[, sum(V3)]
+def <- data[, sum(V2)]
+prot <- def / tot
+
+sq1 <- sqrt(prot * (1 - prot) / 47)
+sq2 <- (prot + 3) * sqrt(prot * (1 - prot) / 47)
+
+test1 <- prot * (1 - prot)
+test2 <- test1 / 47
+test3 <- sqrt(test2)
+sq3 <- (prot + 3) * test3
